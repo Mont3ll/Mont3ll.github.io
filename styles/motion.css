@@ -1,0 +1,161 @@
+/* ─── Keyframes ─── */
+@keyframes pageReveal {
+  from { opacity: 0; transform: translateY(34px) scale(0.982); filter: blur(14px); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);     filter: blur(0);   }
+}
+@keyframes contentReveal {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes pageWipe {
+  0%   { transform: translateX(-102%); }
+  48%  { transform: translateX(0);     }
+  100% { transform: translateX(102%);  }
+}
+@keyframes counterReveal {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes titleReveal {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes lineDrift {
+  from { transform: translateX(-8px); }
+  to   { transform: translateX(8px);  }
+}
+@keyframes markerPulse {
+  0%, 100% { opacity: 0.35; transform: translateY(0);    }
+  50%       { opacity: 0.85; transform: translateY(-4px); }
+}
+@keyframes drawLine {
+  from { stroke-dashoffset: 760; }
+  to   { stroke-dashoffset: 0;   }
+}
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1);    opacity: 1;    }
+  50%       { transform: scale(1.35); opacity: 0.55; }
+}
+@keyframes cursorBlink {
+  0%, 45%   { opacity: 1;    transform: scaleY(1);    }
+  46%, 100% { opacity: 0.22; transform: scaleY(0.82); }
+}
+@keyframes preloaderOut {
+  from { transform: translateY(0);     opacity: 1; }
+  to   { transform: translateY(-102%); opacity: 1; }
+}
+@keyframes preloaderInnerOut {
+  from { transform: translateY(0);    opacity: 1; filter: blur(0);  }
+  to   { transform: translateY(36px); opacity: 0; filter: blur(8px);}
+}
+@keyframes preloaderMarkIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes preloaderLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes preloaderCount {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes viewTransitionOld {
+  from { opacity: 1; transform: translateY(0)    scale(1);     filter: blur(0);   }
+  to   { opacity: 0; transform: translateY(-18px) scale(0.988); filter: blur(10px);}
+}
+@keyframes viewTransitionNew {
+  from { opacity: 0; transform: translateY(24px) scale(0.992); filter: blur(14px); clip-path: inset(8% 0 0 0); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);     filter: blur(0);   clip-path: inset(0 0 0 0);   }
+}
+@keyframes viewTransitionThemeOld {
+  from { opacity: 1; filter: blur(0);  }
+  to   { opacity: 0.74; filter: blur(7px); }
+}
+@keyframes viewTransitionThemeNew {
+  from { opacity: 0.68; filter: blur(9px); }
+  to   { opacity: 1;    filter: blur(0);   }
+}
+
+/* ─── View transition hooks ─── */
+::view-transition-old(portfolio-frame) {
+  animation: viewTransitionOld 620ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+::view-transition-new(portfolio-frame) {
+  animation: viewTransitionNew 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+::view-transition-group(portfolio-frame) { animation-duration: 760ms; }
+.theme-transition-active::view-transition-old(portfolio-frame) {
+  animation: viewTransitionThemeOld 520ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+.theme-transition-active::view-transition-new(portfolio-frame) {
+  animation: viewTransitionThemeNew 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(portfolio-frame),
+  ::view-transition-new(portfolio-frame) { animation-duration: 1ms !important; }
+}
+
+/* ─── Preloader ─── */
+.preloader {
+  position: absolute; inset: 0; z-index: 70;
+  display: grid; place-items: center;
+  background: #111; color: #f4f1ea; overflow: hidden;
+}
+.preloader.is-done {
+  pointer-events: none;
+  animation: preloaderOut 900ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+.preloader.is-done .preloader-inner {
+  animation: preloaderInnerOut 900ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+.preloader-inner   { display: grid; width: min(520px, 78%); gap: 2.4rem; }
+.preloader-meta    { display: flex; align-items: center; justify-content: space-between; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(244, 241, 234, 0.55); font-variant-numeric: tabular-nums; }
+.preloader-mark    { animation: preloaderMarkIn 620ms cubic-bezier(0.16, 1, 0.3, 1) both; font-size: clamp(58px, 13vw, 165px); line-height: 0.9; letter-spacing: -0.12em; }
+.preloader-count   { animation: preloaderCount 420ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.preloader-track   { height: 1px; overflow: hidden; background: rgba(244, 241, 234, 0.16); }
+.preloader-line    { height: 100%; background: #f4f1ea; transform-origin: left; animation: preloaderLine 1700ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* ─── Page animations ─── */
+.motion-page { animation: pageReveal 920ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.motion-page::before {
+  content: ""; position: absolute; inset: 0; z-index: 40; pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.055) 38%, rgba(255,255,255,.72) 50%, rgba(0,0,0,.04) 62%, transparent 100%);
+  animation: pageWipe 980ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.page-content  { animation: contentReveal 880ms cubic-bezier(0.16, 1, 0.3, 1) 90ms both; }
+.page-content.is-suspended { animation: none; opacity: 0; transform: translateY(28px); filter: blur(10px); }
+.page-content.is-preloading-home .home-particle-field { opacity: 0; transform: scale(0.985); }
+.home-particle-field { opacity: 1; transform: scale(1); transition: opacity 720ms cubic-bezier(0.16,1,0.3,1), transform 900ms cubic-bezier(0.16,1,0.3,1); }
+.home-suspense-placeholder { min-height: 545px; opacity: 0; pointer-events: none; }
+.page-counter  { animation: counterReveal 520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.motion-page h1 { animation: titleReveal 900ms cubic-bezier(0.16, 1, 0.3, 1) 210ms both; }
+.motion-page p, .motion-page dl, .motion-page form, .motion-page ul { animation: fadeUp 780ms cubic-bezier(0.16, 1, 0.3, 1) 330ms both; }
+
+/* ─── Rotating build line ─── */
+.rotating-build-line { display: inline-flex; flex-wrap: nowrap; align-items: baseline; gap: 0.18em; overflow: visible; white-space: nowrap; }
+.typewriter-shell { position: relative; display: inline-flex; align-items: baseline; width: 5.85em; min-width: 5.85em; vertical-align: baseline; white-space: nowrap; }
+.typewriter-word { display: inline-block; min-width: 0.25em; }
+.typewriter-cursor { display: inline-block; width: 0.48em; height: 0.08em; margin-left: 0.07em; background: currentColor; transform: translateY(-0.08em); animation: cursorBlink 1.05s steps(1, end) infinite; }
+@media (max-width: 700px) {
+  .rotating-build-line { display: flex; flex-wrap: wrap; white-space: normal; gap: 0.14em 0.18em; font-size: 0.88em; max-width: 100%; line-height: 1.08; }
+  .rotating-build-line > span:first-child { flex: 0 0 100%; max-width: 100%; }
+  .typewriter-shell { flex: 0 1 auto; width: min(5.85em, 100%); min-width: 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+  .typewriter-word { overflow-wrap: anywhere; }
+}
+
+/* ─── Misc ─── */
+.split-word { display: inline-block; overflow: visible; vertical-align: baseline; }
+.split-word > span { display: inline-block; padding-block: 0.04em; animation: titleReveal 900ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.pulse-dot { animation: dotPulse 2.6s ease-in-out infinite; }
+.availability-dot { background: var(--ink); }
+.wave-line { vector-effect: non-scaling-stroke; }
+.marker-line { animation: markerPulse 5.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.draw-chart { stroke-dasharray: 760; stroke-dashoffset: 760; animation: drawLine 1500ms cubic-bezier(0.16, 1, 0.3, 1) 420ms both; }
+@media (prefers-reduced-motion: reduce) {
+  .landscape svg, .marker-line, .pulse-dot { animation-duration: 8s !important; }
+}

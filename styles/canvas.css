@@ -1,0 +1,14 @@
+/* ─── Particle canvas / ParticleWord ─── */
+.particle-stage  { overflow: visible; contain: paint; }
+.particle-canvas { pointer-events: none; touch-action: none; }
+.theme-dark .particle-canvas { opacity: .82; filter: invert(1); }
+.pixel-canvas { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; display: block; }
+.theme-dark .pixel-canvas { filter: invert(1); opacity: .74; }
+
+/* ─── Floating wireframe ─── */
+.floating-wireframe {
+  mask-image: radial-gradient(ellipse at center, black 38%, rgba(0,0,0,.78) 62%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 38%, rgba(0,0,0,.78) 62%, transparent 100%);
+}
+.theme-dark .floating-wireframe { filter: invert(1); opacity: .68; }
+.landscape svg { animation: lineDrift 8s ease-in-out infinite alternate; transform-origin: center; }

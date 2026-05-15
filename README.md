@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# mont3ll portfolio
 
-## Getting Started
+Production Next.js App Router portfolio — migrated from the single-file design preview.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router, TypeScript)
+- **Tailwind CSS v4**
+- **Bun** (package manager + dev server)
+
+## Structure
+
+```
+app/            → App Router pages (/, /about, /blog, /blog/[slug], /work, /work/[slug], /skills, /contact)
+components/
+  layout/       → PageFrame, TopNav, BottomStatus, Logo, MobileMenu, MobileMenuButton
+  motion/       → Preloader, MagneticButton, RevealList, SplitText, SplitSkill, RotatingBuildLine
+  canvas/       → ParticleWord, PixelCanvas, FloatingWireframe
+  blog/         → BlogList, BlogFigure, BlogCodeBlock, BlogArticleLayout
+  work/         → WorkProjectList, ProjectImage, ProjectImageGrid, ProjectCaseStudyLayout
+  skills/       → PixelInteractionCards (PixelCard + PixelIcon)
+  ui/           → Arrow, Dot, Meta, ContactLine
+data/           → site.ts, posts.ts, projects.ts, skills.ts
+content/        → posts/*.mdx, projects/*.mdx  (reserved for future MDX)
+hooks/          → useTheme, usePreloader, useViewTransition, useReducedMotion, useMediaQuery
+lib/            → cx, clamp, canvas, content, seo, skillVariant
+styles/         → theme, motion, layout, mobile-menu, lists, project, blog, skills, canvas (all imported in globals.css)
+public/         → images/, icons/, og/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun install
+bun dev       # → http://localhost:3000
+bun build     # production build
+bun start     # serve production build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding content
 
-## Learn More
+- **Projects** → edit `data/projects.ts` and drop images into `public/images/projects/<slug>/`
+- **Blog posts** → edit `data/posts.ts`; body content is in `components/blog/BlogArticleLayout.tsx` (swap for MDX later)
+- **Skills** → edit `data/skills.ts`
 
-To learn more about Next.js, take a look at the following resources:
+## Image convention
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Project and blog images live under `public/images/`. Reference them as `/images/projects/aether-dashboard/hero.jpg`.
