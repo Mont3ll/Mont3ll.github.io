@@ -159,3 +159,26 @@
 @media (prefers-reduced-motion: reduce) {
   .landscape svg, .marker-line, .pulse-dot { animation-duration: 8s !important; }
 }
+
+/* ─── Shared element transitions ─────────────────────────────────────────── */
+/* page-heading: section titles morph between pages (Blog. → Work. etc.)     */
+/* project-title-* / post-title-*: list items hero-fly to detail h1          */
+
+::view-transition-group(page-heading) {
+  animation-duration: 500ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* Clean crossfade within the group — no extra blur/translate on the content */
+::view-transition-old(page-heading),
+::view-transition-new(page-heading) {
+  animation-duration: 240ms;
+  animation-timing-function: ease;
+  mix-blend-mode: normal;
+}
+
+/* Hero title transitions (project / post) — faster, more energetic */
+:root {
+  /* Used by both project-title-* and post-title-* groups */
+  --hero-title-duration: 520ms;
+  --hero-title-easing: cubic-bezier(0.16, 1, 0.3, 1);
+}

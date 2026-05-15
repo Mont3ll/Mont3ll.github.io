@@ -8,7 +8,7 @@ export default function WorkPage() {
     <div className="pb-24 pt-14 md:pt-20">
       <div className="grid gap-8 md:grid-cols-[0.6fr_0.4fr]">
         <div>
-          <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]">Selected work.</h1>
+          <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]" style={{ viewTransitionName: "page-heading" }}>Selected work.</h1>
           <p className="mt-4 max-w-[330px] text-[15px] leading-6 text-black/70">
             A collection of projects and case studies.
           </p>

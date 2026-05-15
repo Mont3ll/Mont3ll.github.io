@@ -22,7 +22,12 @@ export function ProjectCaseStudyLayout({ project }: ProjectCaseStudyLayoutProps)
           <p className="mb-4 text-[13px] text-black/55">
             {project.number} / {project.type}
           </p>
-          <h1 className="text-[42px] tracking-[-0.07em] md:text-[52px]">{project.title}</h1>
+          <h1
+            className="text-[42px] tracking-[-0.07em] md:text-[52px]"
+            style={{ viewTransitionName: `project-title-${project.slug}` }}
+          >
+            {project.title}
+          </h1>
           <p className="mt-5 max-w-[360px] text-[15px] leading-6 text-black/70">
             {project.summary}.
           </p>

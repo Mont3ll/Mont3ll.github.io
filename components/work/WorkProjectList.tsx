@@ -187,7 +187,9 @@ export function WorkProjectList({ projects }: WorkProjectListProps) {
               href={`/work/${project.slug}`}
               className="text-[20px] tracking-[-0.04em] md:text-[22px]"
             >
-              {project.title}
+              <span style={{ viewTransitionName: `project-title-${project.slug}` }}>
+                {project.title}
+              </span>
             </ViewTransitionLink>
             <span className="hidden text-[14px] text-black/60 md:block">{project.summary}</span>
             <span className="hidden text-[14px] text-black/60 md:block">{project.type}</span>

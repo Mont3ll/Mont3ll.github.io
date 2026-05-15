@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <div className="grid gap-12 pb-24 pt-14 md:grid-cols-[0.48fr_0.52fr] md:pt-20">
       <div>
-        <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]">About me.</h1>
+        <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]" style={{ viewTransitionName: "page-heading" }}>About me.</h1>
         <div className="mt-12 max-w-[480px] space-y-6 text-[16px] leading-7 text-black/75">
           <p>
             I&apos;m Montell — a software developer based in Nairobi, Kenya, specialising in

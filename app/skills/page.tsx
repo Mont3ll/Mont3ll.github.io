@@ -6,7 +6,7 @@ import { PixelInteractionCards } from "@/components/skills/PixelInteractionCards
 export default function SkillsPage() {
   return (
     <div className="pb-24 pt-14 md:pt-20">
-      <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]">Skills &amp; tools.</h1>
+      <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]" style={{ viewTransitionName: "page-heading" }}>Skills &amp; tools.</h1>
       <p className="mt-4 max-w-[280px] text-[15px] text-black/70">
         Technologies I work with.
       </p>
