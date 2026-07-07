@@ -9,7 +9,7 @@ export type SeoProps = {
 
 export function buildSeo(props: SeoProps = {}) {
   const title = props.title
-    ? `${props.title} — mont3ll`
+    ? `${props.title} | mont3ll`
     : siteConfig.title;
   const description = props.description ?? siteConfig.description;
   const image = props.image ?? `${siteConfig.url}/og/default.png`;

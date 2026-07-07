@@ -8,24 +8,41 @@ export type Post = {
 };
 
 export const posts: Post[] = [
-  // ── Most recent PI/LLM series (2026) ─────────────────────────────────────
+  {
+    slug: "garagepro-tenant-isolation-rbac-reporting",
+    date: "Jul 07, 2026",
+    title: "How I built tenant isolation and reporting in GaragePro",
+    category: "SaaS / Architecture",
+    excerpt:
+      "A technical case study on GaragePro: tenant-scoped data, supplier and garage roles, server-side authorization, dashboards, and reports for an automotive service SaaS.",
+    coverImage: "/images/projects/autowerk-saas/preview.png",
+  },
+  {
+    slug: "somaai-embedded-agentic-classroom",
+    date: "Jul 07, 2026",
+    title: "Embedding a multi-agent classroom inside an LMS",
+    category: "AI / Product",
+    excerpt:
+      "How the LMS connects course content, analytics, S3-compatible storage, async jobs, instructor review, and an embedded multi-agent classroom surface.",
+    coverImage: "/images/projects/bomaed-lms/preview.webp",
+  },
+  {
+    slug: "timetab-hospitality-scheduling-system",
+    date: "Jul 07, 2026",
+    title: "Designing TimeTab for a hospitality college",
+    category: "Product / Scheduling",
+    excerpt:
+      "A case study on the timetable and exam scheduling system built with Boma International Hospitality College, including venue constraints, cohort splits, conflict checks, and exports.",
+    coverImage: "/images/projects/bihc-scheduler/preview.png",
+  },
   {
     slug: "building-ai-agent-memory",
     date: "May 10, 2026",
-    title: "Building a persistent memory system for AI agents",
+    title: "Building persistent memory for AI coding agents",
     category: "AI / Tooling",
     excerpt:
-      "How I designed the JSONL-based memory architecture behind pi-persistent-intelligence: daily logs, long-term promotion, and a governed inbox for AI coding agents.",
+      "How I designed pi-persistent-intelligence: JSONL records, governed promotion, session search, evidence trails, and memory that survives beyond one terminal session.",
     coverImage: "/images/blog/building-ai-agent-memory.png",
-  },
-  {
-    slug: "publishing-dual-registry-npm",
-    date: "May 12, 2026",
-    title: "Publishing an npm package to two registries at once",
-    category: "Engineering",
-    excerpt:
-      "npmjs.com and GitHub Packages are separate registries with separate auth. Here is the GitHub Actions workflow that publishes to both in a single pipeline without duplication.",
-    coverImage: "/images/blog/publishing-dual-registry-npm.png",
   },
   {
     slug: "the-llm-wiki-vault",
@@ -33,26 +50,34 @@ export const posts: Post[] = [
     title: "Building a research wiki where sources stay immutable",
     category: "AI / Research",
     excerpt:
-      "An Obsidian vault where an LLM agent maintains a living wiki on top of raw, immutable sources. How the schema works and why provenance chains matter.",
+      "An Obsidian vault where an agent can maintain source-backed notes without corrupting the raw source layer. The hard part is provenance, not markdown.",
     coverImage: "/images/blog/the-llm-wiki-vault.png",
+  },
+  {
+    slug: "publishing-dual-registry-npm",
+    date: "May 12, 2026",
+    title: "Publishing one package to npm and GitHub Packages",
+    category: "Engineering",
+    excerpt:
+      "The small CI details that matter when one TypeScript package has to publish cleanly to npmjs.com and GitHub Packages from the same release tag.",
+    coverImage: "/images/blog/publishing-dual-registry-npm.png",
   },
   {
     slug: "switching-to-pi-coding-agent",
     date: "May 06, 2026",
-    title: "Switching my entire dev workflow to PI",
+    title: "Why I moved my AI workflow into PI",
     category: "DX",
     excerpt:
-      "Why I moved from ad-hoc AI assistance to a persistent coding agent that remembers context across sessions, manages its own memory, and stays in the terminal.",
+      "What changed when I stopped treating AI as a chat window and started treating it as a terminal-native development environment with memory and tools.",
     coverImage: "/images/blog/switching-to-pi-coding-agent.png",
   },
-  // ── Earlier articles ──────────────────────────────────────────────────────
   {
     slug: "docker-to-podman",
     date: "Mar 23, 2025",
     title: "Why I switched from Docker to Podman",
     category: "DevOps",
     excerpt:
-      "Docker dominated the container space for years, but Podman's daemonless, rootless architecture offers a fundamentally more secure approach. Here's why I made the switch.",
+      "What I gained from rootless containers, systemd integration, and a local setup that fits better with NixOS and reproducible development.",
     coverImage: "/images/blog/docker-to-podman.webp",
   },
   {
@@ -61,34 +86,16 @@ export const posts: Post[] = [
     title: "Multilingual Next.js with App Router i18n",
     category: "Frontend",
     excerpt:
-      "Next.js App Router makes middleware-based i18n routing elegant. Here's the architecture I used to build a trilingual corporate site with no third-party i18n library.",
+      "A practical App Router i18n setup using middleware, route segments, dictionaries, and static content without adding a heavy translation framework.",
     coverImage: "/images/blog/multilingual-nextjs-i18n.jpg",
   },
   {
     slug: "from-wsl-to-nixos",
     date: "Feb 06, 2025",
-    title: "From WSL to NixOS — a declarative dev environment",
+    title: "From WSL to NixOS for daily development",
     category: "Systems",
     excerpt:
-      "After years on WSL, I moved to NixOS for its reproducible, declarative approach to system configuration. It changed how I think about infrastructure entirely.",
+      "Why I moved from a working WSL setup to a declarative Linux machine, and what actually improved once the novelty wore off.",
     coverImage: "/images/blog/from-wsl-to-nixos.webp",
-  },
-  {
-    slug: "startup-sales-lessons",
-    date: "Mar 03, 2025",
-    title: "What startups get wrong about sales",
-    category: "Business",
-    excerpt:
-      "Key insights from a Brewster Barclay webinar on why most technical founders build before they validate and how to find market needs before writing a single line of code.",
-    coverImage: "/images/blog/startup-sales-lessons.webp",
-  },
-  {
-    slug: "building-full-stack-lms",
-    date: "Jul 20, 2024",
-    title: "Building a production LMS with Next.js",
-    category: "Engineering",
-    excerpt:
-      "How I designed and shipped BomaEd: a full-stack learning management system with video streaming, Stripe payments, and role-based access, from zero to deployed.",
-    coverImage: "/images/blog/building-full-stack-lms.webp",
   },
 ];

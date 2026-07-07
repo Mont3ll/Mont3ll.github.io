@@ -4,8 +4,8 @@ import { ViewTransitionLink } from "@/components/motion/ViewTransitionLink";
 const facts = [
   ["Name", "Montell Luseno"],
   ["Location", "Nairobi, Kenya"],
-  ["Focus", "Full-stack web development"],
-  ["Experience", "3+ years"],
+  ["Focus", "Full-stack SaaS, AI products, and analytics"],
+  ["Experience", "5+ years"],
   ["Email", "hello@mont3ll.dev"],
   ["Availability", "Open to new opportunities"],
 ];
@@ -17,17 +17,17 @@ export default function AboutPage() {
         <h1 className="text-[52px] tracking-[-0.07em] md:text-[70px]" style={{ viewTransitionName: "page-heading" }}>About me.</h1>
         <div className="mt-12 max-w-[480px] space-y-6 text-[16px] leading-7 text-black/75">
           <p>
-            I&apos;m Montell — a software developer based in Nairobi, Kenya, specialising in
-            building full-stack web products that are fast, maintainable, and purposeful.
+            I&apos;m Montell, a software developer based in Nairobi, Kenya. I build full-stack
+            web products that are fast, maintainable, and useful in real workflows.
           </p>
           <p>
-            My work spans e-commerce platforms, learning management systems, multilingual
-            corporate sites, and open-source developer tooling. I care deeply about code
-            quality, system design, and the user experience behind every interface.
+            My work spans multi-tenant SaaS, learning platforms, marketplaces, scheduling
+            tools, analytics-heavy dashboards, and open-source agent tooling. I care about
+            clear data models, reliable access control, and interfaces that help people get work done.
           </p>
           <p>
-            When I&apos;m not shipping products, I&apos;m writing about the technology choices I
-            make — from switching to declarative Linux setups to building AI agent memory systems.
+            When I&apos;m not shipping products, I write about the technical choices behind the work,
+            from declarative Linux setups to governed memory for AI coding agents.
           </p>
         </div>
         <ViewTransitionLink

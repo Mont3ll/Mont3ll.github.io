@@ -22,7 +22,11 @@ function ProjectHoverPreview({
   pointer: { x: number; y: number; rotate: number };
   visible: boolean;
 }) {
-  if (typeof document === "undefined") return null;
+  // Use a mounted flag so both SSR and the initial client render return null,
+  // avoiding the hydration mismatch that createPortal(…, document.body) causes.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return createPortal(
     <div

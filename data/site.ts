@@ -3,10 +3,10 @@ export const fontStack =
 
 export const siteConfig = {
   name: "mont3ll",
-  title: "mont3ll — Full-Stack Developer",
+  title: "mont3ll | Full-Stack Developer",
   description:
-    "Full-stack developer focused on clean code, performance, and great user experiences.",
-  url: "https://mont3ll.dev",
+    "Full-stack developer focused on SaaS platforms, AI products, analytics, and reliable web systems.",
+  url: "https://mont3ll.me",
   email: "hello@mont3ll.dev",
   social: {
     github: "https://github.com/mont3ll",

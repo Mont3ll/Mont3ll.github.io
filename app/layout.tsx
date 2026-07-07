@@ -4,7 +4,7 @@ import { PageFrame } from "@/components/layout/PageFrame";
 import { fontStack } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "mont3ll — Full-Stack Developer",
+  title: "mont3ll | Full-Stack Developer",
   description:
     "Full-stack developer focused on clean code, performance, and great user experiences.",
 };

@@ -7,13 +7,13 @@ interface BlogFigureProps {
 export function BlogFigure({ title, caption, src = "" }: BlogFigureProps) {
   return (
     <figure className="blog-figure">
-      <div className="blog-figure-visual">
+      <div className={`blog-figure-visual ${src ? "has-image" : ""}`}>
         {src ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt="" className="project-detail-image" />
+          <img src={src} alt="" className="blog-figure-image" />
         ) : null}
-        <div className="blog-figure-grid" />
-        <div className="blog-figure-label">{title}</div>
+        {!src ? <div className="blog-figure-grid" /> : null}
+        {!src ? <div className="blog-figure-label">{title}</div> : null}
       </div>
       <figcaption>{caption}</figcaption>
     </figure>

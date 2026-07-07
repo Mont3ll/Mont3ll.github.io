@@ -34,11 +34,10 @@ export function PageFrame({ children }: PageFrameProps) {
       <section className="portfolio-frame motion-page relative mx-auto flex h-full max-w-[1920px] flex-col overflow-x-hidden">
         <TopNav theme={theme} toggleTheme={toggleTheme} />
         {/*
-          overflow-y: auto  — page content scrolls inside the frame
-          overflow-x: clip  — clips horizontal overflow WITHOUT creating a
-                              scroll container, so the y-axis is not normalised
-                              to 'auto', allowing hero particles to extend
-                              beyond the centred content column unclipped
+          overflow-y: auto lets page content scroll inside the frame.
+          overflow-x: clip clips horizontal overflow without creating a scroll container,
+          so the y-axis is not normalised to auto and hero particles can extend beyond
+          the centred content column unclipped.
         */}
         <div className="page-content flex-1">
           <div className="mx-auto w-full max-w-[1400px] px-4 md:px-8">

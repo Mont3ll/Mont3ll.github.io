@@ -18,7 +18,7 @@ export function BlogList() {
     <div className="grid gap-12 pb-16 pt-14 md:h-[calc(100dvh-160px)] md:grid-cols-[0.36fr_0.64fr] md:gap-0 md:overflow-hidden md:pb-0 md:pt-0">
 
       {/* ── Left: fixed ──────────────────────────────────────────────── */}
-      <div className="md:flex md:flex-col md:justify-center md:py-20 md:pr-10">
+      <div className="md:py-20 md:pr-10">
         <h1
           className="text-[52px] tracking-[-0.07em] md:text-[70px]"
           style={{ viewTransitionName: "page-heading" }}
@@ -30,7 +30,7 @@ export function BlogList() {
         </p>
         <ViewTransitionLink
           href={`/blog/${posts[0].slug}`}
-          className="group mt-10 inline-block border-b border-black pb-2 text-[14px]"
+          className="group mt-10 inline-block w-fit border-b border-black pb-2 text-[14px]"
         >
           Read latest post <Arrow />
         </ViewTransitionLink>

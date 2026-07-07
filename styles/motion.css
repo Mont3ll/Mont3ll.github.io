@@ -168,7 +168,7 @@
   animation-duration: 500ms;
   animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
-/* Clean crossfade within the group — no extra blur/translate on the content */
+/* Clean crossfade within the group, with no extra blur or translate on the content */
 ::view-transition-old(page-heading),
 ::view-transition-new(page-heading) {
   animation-duration: 240ms;
@@ -176,7 +176,7 @@
   mix-blend-mode: normal;
 }
 
-/* Hero title transitions (project / post) — faster, more energetic */
+/* Hero title transitions for project and post pages */
 :root {
   /* Used by both project-title-* and post-title-* groups */
   --hero-title-duration: 520ms;

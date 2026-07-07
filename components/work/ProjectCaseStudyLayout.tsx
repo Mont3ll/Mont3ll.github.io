@@ -67,7 +67,7 @@ export function ProjectCaseStudyLayout({ project }: ProjectCaseStudyLayoutProps)
             caption={
               imageSrcs[0]
                 ? "Primary project screenshot."
-                : "Fallback editorial layout — add project screenshots to public/images/projects."
+                : "Fallback editorial layout. Add project screenshots to public/images/projects."
             }
           />
 
@@ -84,7 +84,7 @@ export function ProjectCaseStudyLayout({ project }: ProjectCaseStudyLayoutProps)
             caption={
               imageSrcs[3]
                 ? "Architecture or extended project visual."
-                : "Fallback architecture visual — replace with a real screenshot or diagram."
+                : "Fallback architecture visual. Replace this with a real screenshot or diagram."
             }
             variant="tall"
           />
