@@ -6,7 +6,7 @@ import { fontStack } from "@/data/site";
 export const metadata: Metadata = {
   title: "mont3ll | Full-Stack Developer",
   description:
-    "Full-stack developer focused on clean code, performance, and great user experiences.",
+    "Full-stack developer focused on SaaS platforms, AI products, analytics, and reliable web systems.",
 };
 
 export default function RootLayout({
