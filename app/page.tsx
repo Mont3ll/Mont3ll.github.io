@@ -32,7 +32,7 @@ export default function HomePage() {
               <SplitText>I build software that solves real problems.</SplitText>
             </h1>
             <p className="mt-9 max-w-[390px] text-[16px] leading-6 text-black/70">
-              Full-stack developer focused on clean code, performance, and great user experiences.
+              Full-stack developer focused on SaaS platforms, AI products, analytics, and reliable web systems.
             </p>
             <ViewTransitionLink
               href="/work"
