@@ -15,8 +15,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "pi-persistent-intelligence",
+    slug: "pi-governance",
     number: "01",
+    title: "PI Governance",
+    summary: "Local-first governed memory CLI and MCP server for AI agents",
+    type: "Rust / MCP / AI Infrastructure",
+    role: "Creator and maintainer",
+    timeline: "2026",
+    stack: ["Rust", "MCP", "JSONL", "CLI", "Schema Design", "Agent Memory"],
+    links: {
+      live: "https://crates.io/crates/pi-governance-rs",
+      source: "https://github.com/Mont3ll/pi-governance-rs",
+    },
+    previewImage: "/images/projects/pi-persistent-intelligence/preview.png",
+    images: [
+      { src: "/images/projects/pi-persistent-intelligence/preview.png", caption: "Governed memory review surface and related PI tooling.", variant: "tall" },
+    ],
+    body: "A local-first governed memory CLI and stdio MCP server for AI agents. PI Governance lets MCP-capable clients capture, review, retrieve, inspect, import, and export durable agent memory while keeping the store on the user's machine by default. I designed the Rust workspace, CLI, MCP tool surface, JSONL memory contract, schemas, reviewable patch flow, L1/L2/L3 memory layers, local retrieval, diagnostics, and compatibility path with pi-persistent-intelligence. The project is relevant to agentic analytics and AI product work because it focuses on governed context, auditability, local security boundaries, and tool interoperability through MCP.",
+  },
+  {
+    slug: "pi-persistent-intelligence",
+    number: "02",
     title: "PI Persistent Intelligence",
     summary: "Governed memory and session search for AI coding agents",
     type: "OSS / NPM Package",
@@ -35,7 +54,7 @@ export const projects: Project[] = [
   },
   {
     slug: "garagepro",
-    number: "02",
+    number: "03",
     title: "GaragePro",
     summary: "Multi-tenant garage and supplier management SaaS",
     type: "SaaS / Web App",
@@ -54,7 +73,7 @@ export const projects: Project[] = [
   },
   {
     slug: "somaai-lms",
-    number: "03",
+    number: "04",
     title: "SomaAI LMS",
     summary: "AI-enabled LMS with analytics and embedded classroom flows",
     type: "LMS / AI Product",
@@ -70,7 +89,7 @@ export const projects: Project[] = [
   },
   {
     slug: "chapaworks",
-    number: "04",
+    number: "05",
     title: "Chapaworks",
     summary: "Verified artisan services marketplace",
     type: "Marketplace / Web App",
@@ -88,7 +107,7 @@ export const projects: Project[] = [
   },
   {
     slug: "timetab",
-    number: "05",
+    number: "06",
     title: "TimeTab",
     summary: "Hospitality college timetable and exam scheduler",
     type: "Scheduling / Web App",

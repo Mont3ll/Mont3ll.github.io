@@ -9,33 +9,6 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "garagepro-tenant-isolation-rbac-reporting",
-    date: "Jul 07, 2026",
-    title: "How I built tenant isolation and reporting in GaragePro",
-    category: "SaaS / Architecture",
-    excerpt:
-      "A technical case study on GaragePro: tenant-scoped data, supplier and garage roles, server-side authorization, dashboards, and reports for an automotive service SaaS.",
-    coverImage: "/images/projects/autowerk-saas/preview.png",
-  },
-  {
-    slug: "somaai-embedded-agentic-classroom",
-    date: "Jul 07, 2026",
-    title: "Embedding a multi-agent classroom inside an LMS",
-    category: "AI / Product",
-    excerpt:
-      "How the LMS connects course content, analytics, S3-compatible storage, async jobs, instructor review, and an embedded multi-agent classroom surface.",
-    coverImage: "/images/projects/bomaed-lms/preview.webp",
-  },
-  {
-    slug: "timetab-hospitality-scheduling-system",
-    date: "Jul 07, 2026",
-    title: "Designing TimeTab for a hospitality college",
-    category: "Product / Scheduling",
-    excerpt:
-      "A case study on the timetable and exam scheduling system built with Boma International Hospitality College, including venue constraints, cohort splits, conflict checks, and exports.",
-    coverImage: "/images/projects/bihc-scheduler/preview.png",
-  },
-  {
     slug: "building-ai-agent-memory",
     date: "May 10, 2026",
     title: "Building persistent memory for AI coding agents",
