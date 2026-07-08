@@ -15,11 +15,11 @@ export default function ContactPage() {
       </div>
       <div className="mt-8 grid gap-14 border-t border-black/10 pt-10 md:grid-cols-[0.36fr_0.64fr]">
         <div className="space-y-7 text-[15px]">
-          <ContactLine label="Email" value="hello@mont3ll.dev" href="mailto:hello@mont3ll.dev" />
+          <ContactLine label="Email" value="meluseno@gmail.com" href="mailto:meluseno@gmail.com" />
           <ContactLine
             label="LinkedIn"
-            value="linkedin.com/in/mont3ll"
-            href="https://linkedin.com/in/mont3ll"
+            value="linkedin.com/in/montell-luseno"
+            href="https://www.linkedin.com/in/montell-luseno"
           />
           <ContactLine
             label="GitHub"

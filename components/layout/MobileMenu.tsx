@@ -87,10 +87,10 @@ export function MobileMenu({ close, closing, metrics, theme, toggleTheme }: Mobi
               <a className="side-menu-social-link" href="https://github.com/mont3ll" target="_blank" rel="noreferrer">
                 GitHub <span>↗</span>
               </a>
-              <a className="side-menu-social-link" href="https://linkedin.com/in/mont3ll" target="_blank" rel="noreferrer">
+              <a className="side-menu-social-link" href="https://www.linkedin.com/in/montell-luseno" target="_blank" rel="noreferrer">
                 LinkedIn <span>↗</span>
               </a>
-              <a className="side-menu-social-link" href="mailto:hello@mont3ll.dev">
+              <a className="side-menu-social-link" href="mailto:meluseno@gmail.com">
                 Email <span>→</span>
               </a>
             </div>

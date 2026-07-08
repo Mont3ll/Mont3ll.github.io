@@ -6,7 +6,7 @@ const facts = [
   ["Location", "Nairobi, Kenya"],
   ["Focus", "Full-stack SaaS, AI products, and analytics"],
   ["Experience", "5+ years"],
-  ["Email", "hello@mont3ll.dev"],
+  ["Email", "meluseno@gmail.com"],
   ["Availability", "Open to new opportunities"],
 ];
 

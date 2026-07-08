@@ -20,8 +20,8 @@ export function BlogArticleLayout({ post }: BlogArticleLayoutProps) {
         ← Back to blog
       </ViewTransitionLink>
 
-      <div className="grid gap-8 md:h-[calc(100%-44px)] md:grid-cols-[0.42fr_0.58fr] md:gap-6">
-        <div className="md:sticky md:top-8 md:self-start">
+      <div className="grid gap-8 md:h-[calc(100%-44px)] md:grid-cols-[minmax(320px,0.42fr)_minmax(0,0.58fr)] md:gap-6">
+        <aside className="md:sticky md:top-8 md:self-start">
           <p className="mb-5 text-[13px] text-black/55">
             {post.date} · {post.category}
           </p>
@@ -42,9 +42,9 @@ export function BlogArticleLayout({ post }: BlogArticleLayoutProps) {
             <button type="button">LinkedIn</button>
             <button type="button">Copy link</button>
           </div>
-        </div>
+        </aside>
 
-        <div className="min-h-0 md:h-full">
+        <section className="min-h-0 md:h-full" aria-label="Article body">
           <div
             ref={scrollRef}
             className="post-scroll-pane h-full overflow-y-auto pr-2 pt-1 text-[16px] leading-7 text-black/76 md:pr-4"
@@ -58,7 +58,7 @@ export function BlogArticleLayout({ post }: BlogArticleLayoutProps) {
               <span className="text-black/55">Next post →</span>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </article>
   );

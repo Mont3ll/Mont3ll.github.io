@@ -7,10 +7,10 @@ export const siteConfig = {
   description:
     "Full-stack developer focused on SaaS platforms, AI products, analytics, and reliable web systems.",
   url: "https://mont3ll.me",
-  email: "hello@mont3ll.dev",
+  email: "meluseno@gmail.com",
   social: {
     github: "https://github.com/mont3ll",
-    linkedin: "https://linkedin.com/in/mont3ll",
+    linkedin: "https://www.linkedin.com/in/montell-luseno",
     twitter: "https://twitter.com/mont3ll",
   },
   tagline: ["Clean systems.", "Clear thinking.", "Lasting impact."],
