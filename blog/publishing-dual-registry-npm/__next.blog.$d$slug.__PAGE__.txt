@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[44474,["/_next/static/chunks/09~42ocp1dqzd.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/079g_yg0qwukn.js"],"BlogArticleLayout"]
+3:I[97367,["/_next/static/chunks/09~42ocp1dqzd.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"publishing-dual-registry-npm","date":"May 12, 2026","title":"Publishing one package to npm and GitHub Packages","category":"Engineering","excerpt":"The small CI details that matter when one TypeScript package has to publish cleanly to npmjs.com and GitHub Packages from the same release tag.","coverImage":"/images/blog/publishing-dual-registry-npm.png"}}],[["$","script","script-0",{"src":"/_next/static/chunks/079g_yg0qwukn.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"pJ9Pr6gcGiLhYsdOqhSCX"}
+5:null

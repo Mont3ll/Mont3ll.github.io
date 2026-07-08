@@ -1,0 +1,6 @@
+:HL["/_next/static/chunks/0eaabp1nfy8_w.css","style"]
+:HL["/images/projects/bihc-scheduler/preview.png","image"]
+:HL["/images/projects/bihc-scheduler/timetable.png","image"]
+:HL["/images/projects/bihc-scheduler/generator.png","image"]
+:HL["/images/projects/bihc-scheduler/reports.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"work","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"timetab","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"pJ9Pr6gcGiLhYsdOqhSCX"}
